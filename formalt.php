@@ -15,17 +15,19 @@ $linha=mysqli_fetch_array($resultado);
 mysqli_close($conexao);    
 ?>
 <form action="altera.php" method="post">
-<input type="hidden" name="id" value="<?php echo $linha['id']; ?>"></p>
-<p> CPF:
-<input type="text" name="CPF" value="<?php echo $linha['cpf']; ?>"></p>
-<p>Nome:
-<input type="text" name="nomeCliente" value="<?php echo $linha['nomeCliente']; ?>"></p>
-<p>Data nascimento:
-<input type="date" name="dataNasc" value="<?php echo $linha['dataNasc']; ?>"></p>
-<p>Email:
-<input type="email" name="email" value="<?php echo $linha['email']; ?>"></p>
+<input type="hidden" name="id" value="<?php echo $linha['id']; ?>">
+<p> Nome
+<input type="text" name="nome" value="<?php echo $linha['nome']; ?>"></p>
+<p> Destino
+<input type="text" name="destino" value="<?php echo $linha['destino']; ?>"></p>
+<p> Descrição
+<input type="text" name="descricao" value="<?php echo $linha['descricao']; ?>"></p>
+<p> Duração
+<input type="text" name="duracao" value="<?php echo $linha['duracao']; ?>"></p>
+<p> Valor
+<input type="text" name="valor" value="<?php echo $linha['valor']; ?>"></p>
 <input type="submit" value="Confirma alteração">
 </form>
-<br><a href="index.php"> Listar alunos</a>
+<br><a href="index.php"> Listar turistas</a>
 </body>
 </html>

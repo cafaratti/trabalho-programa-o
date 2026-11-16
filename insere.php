@@ -9,10 +9,12 @@
     <?php
     require "conecta.php";
     $cpf=$_GET['CPF'];
-    $nomeCliente=$_GET['nomeCliente'];
-    $dataNasc=$_GET['dataNasc'];
-    $email=$_GET['email'];
-    $sql="INSERT INTO clientes(CPF,nomeCliente,dataNasc,email) VALUES('$cpf','$nomeCliente','$dataNasc','$email')";
+    $nome=$_GET['nome'];
+    $destino=$_GET['destino'];
+    $descricao=$_GET['descricao'];
+    $duracao=$_GET['duracao'];
+    $valor=$_GET['valor'];
+    $sql="INSERT INTO clientes(nome,destino,descricao,duracao,valor) VALUES('$nome','$destino','$descricao','$duracao','$valor')";
     $resultado=mysqli_query($conexao,$sql);
     if($resultado){
         header("Location:index.php");
